@@ -10,7 +10,7 @@ import {
 import { castOrder } from "./client";
 import { Order, OrderResponse } from "./types";
 
-export { defaultPositionMarket, fetchPositionMarket, PositionMarket };
+export { defaultPositionMarket, fetchPositionMarket, type PositionMarket };
 
 type PositionLimitResponse = {
   idx: string;

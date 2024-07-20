@@ -4,7 +4,7 @@ import { Denom } from "../denom";
 import { KujiraQueryClient } from "../queryClient";
 import { defaultPosition as defaultPositionMarket, fetchPosition as fetchPositionMarket, Position as PositionMarket } from "../usk";
 import { Order } from "./types";
-export { defaultPositionMarket, fetchPositionMarket, PositionMarket };
+export { defaultPositionMarket, fetchPositionMarket, type PositionMarket };
 export type PositionLimit = {
     idx: string;
     owner: string;

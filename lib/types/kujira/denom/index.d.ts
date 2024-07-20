@@ -27,5 +27,5 @@ declare const msg: {
     msgCreateDenom: (data: MsgCreateDenom) => EncodeObject;
     msgMint: (data: MsgMint) => EncodeObject;
 };
-export { msg, types, DenomExtension, setupDenomExtension };
+export { msg, types, type DenomExtension, setupDenomExtension };
 //# sourceMappingURL=index.d.ts.map

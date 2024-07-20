@@ -1,1 +1,1 @@
-export { SchedulerExtension, setupSchedulerExtension } from "./queries";
+export { type SchedulerExtension, setupSchedulerExtension } from "./queries";

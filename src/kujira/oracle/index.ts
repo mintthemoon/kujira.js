@@ -35,4 +35,4 @@ const msg = {
   }),
 };
 
-export { msg, OracleExtension, setupOracleExtension };
+export { msg, type OracleExtension, setupOracleExtension };

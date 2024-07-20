@@ -39,7 +39,7 @@ export {
 } from "./batch";
 export { GenesisState, GravityNonces, Params } from "./genesis";
 export {
-  Query,
+  type Query,
   QueryAttestationsRequest,
   QueryAttestationsResponse,
   QueryBatchConfirmsRequest,
@@ -285,4 +285,4 @@ const msg = {
   }),
 };
 
-export { GravityExtension, msg, setupGravityExtension, types };
+export { type GravityExtension, msg, setupGravityExtension, types };

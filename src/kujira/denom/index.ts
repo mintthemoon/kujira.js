@@ -30,4 +30,4 @@ const msg = {
   }),
 };
 
-export { msg, types, DenomExtension, setupDenomExtension };
+export { msg, types, type DenomExtension, setupDenomExtension };

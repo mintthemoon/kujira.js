@@ -29,5 +29,5 @@ declare const msg: {
     msgAggregateExchangeRatePrevote: (data: MsgAggregateExchangeRatePrevote) => EncodeObject;
     msgDelegateFeedConsent: (data: MsgDelegateFeedConsent) => EncodeObject;
 };
-export { msg, OracleExtension, setupOracleExtension };
+export { msg, type OracleExtension, setupOracleExtension };
 //# sourceMappingURL=index.d.ts.map

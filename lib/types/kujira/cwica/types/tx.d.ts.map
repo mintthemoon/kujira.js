@@ -1,0 +1,1 @@
+{"version":3,"file":"tx.d.ts","sourceRoot":"","sources":["../../../../../src/kujira/cwica/types/tx.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,GAAG,EAAE,MAAM,sBAAsB,CAAC;AAG3C,eAAO,MAAM,eAAe,iBAAiB,CAAC;AAC9C,yCAAyC;AACzC,MAAM,WAAW,GAAG;CAAG;AACvB,qBAAa,aAAc,YAAW,GAAG;IACvC,OAAO,CAAC,QAAQ,CAAC,GAAG,CAAM;gBACd,GAAG,EAAE,GAAG;CAGrB"}

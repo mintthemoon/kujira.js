@@ -3,41 +3,59 @@
   "description": "JS Interface for the Kujira Blockchain",
   "version": "1.0.64",
   "license": "MIT",
+  "type": "module",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
-  "files": [
-    "lib/",
-    "src/"
-  ],
+  "types": "./lib/types/index.d.ts",
+  "files": ["lib/"],
   "scripts": {
-    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "build": "concurrently npm:build:types npm:build:esm npm:build:cjs",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:esm": "tswc --tsconfig tsconfig.json -- src --copy-files -d ./lib/esm",
+    "build:cjs": "tswc --tsconfig tsconfig-cjs.json -- src --copy-files -d ./lib/cjs",
+    "check": "tsc --noEmit",
     "ibc": "node ibc.mjs",
     "contracts": "node contracts.mjs"
   },
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js",
+      "types": "./lib/types/index.d.ts"
+    },
+    "./*": {
+      "import": "./lib/esm/*.js",
+      "require": "./lib/cjs/*.js",
+      "types": "./lib/types/*.d.ts"
+    }
+  },
   "dependencies": {
-    "@cosmjs/cosmwasm-stargate": "^0.32.3",
-    "@cosmjs/proto-signing": "^0.32.3",
-    "@cosmjs/stargate": "^0.32.3",
+    "@cosmjs/cosmwasm-stargate": "^0.32.4",
+    "@cosmjs/proto-signing": "^0.32.4",
+    "@cosmjs/stargate": "^0.32.4",
     "@dao-dao/cosmiframe": "^0.1.0",
     "@ethersproject/bignumber": "^5.7.0",
-    "@keplr-wallet/types": "^0.12.79",
     "@leapwallet/cosmos-snap-provider": "^0.1.26",
-    "@types/google-protobuf": "^3.15.6",
-    "@walletconnect/sign-client": "^2.12.2",
+    "@walletconnect/sign-client": "^2.14.0",
     "cbor-x": "^1.5.9",
-    "chain-registry": "^1.27.0",
-    "cosmjs-types": "^0.9.0",
-    "elliptic": "^6.5.5",
-    "long": "^4.0.0",
+    "chain-registry": "^1.63.34",
+    "elliptic": "^6.5.6",
+    "long": "^5.2.3",
     "text-encoding": "^0.7.0",
-    "uuid": "^9.0.1",
-    "yarn": "^1.22.19"
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
+    "@cosmjs/amino": "^0.32.4",
+    "@keplr-wallet/types": "^0.12.111",
+    "@swc/core": "^1.7.0",
     "@types/elliptic": "^6.4.18",
-    "@types/uuid": "^9.0.8",
-    "react": "^18.2.0",
-    "typescript": "^4.7.4"
+    "@types/google-protobuf": "^3.15.12",
+    "@types/uuid": "^10.0.0",
+    "concurrently": "^8.2.2",
+    "cosmjs-types": "^0.9.0",
+    "react": "^18.3.1",
+    "tswc": "^1.2.0",
+    "typescript": "^5.5.3"
   },
-  "packageManager": "yarn@3.3.0"
+  "packageManager": "yarn@3.8.3"
 }

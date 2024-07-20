@@ -7,7 +7,9 @@
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/types/index.d.ts",
-  "files": ["lib/"],
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "build": "concurrently npm:build:types npm:build:esm npm:build:cjs",
     "build:types": "tsc --emitDeclarationOnly",
@@ -37,6 +39,7 @@
     "@ethersproject/bignumber": "^5.7.0",
     "@leapwallet/cosmos-snap-provider": "^0.1.26",
     "@walletconnect/sign-client": "^2.14.0",
+    "buffer": "^6.0.3",
     "cbor-x": "^1.5.9",
     "chain-registry": "^1.63.34",
     "elliptic": "^6.5.6",

@@ -8,7 +8,7 @@ import {
   ValidatorPubkey,
 } from "@cosmjs/tendermint-rpc";
 import { arrayContentEquals } from "@cosmjs/utils";
-import { Buffer } from "buffer";
+import { Buffer } from "buffer/";
 import { CommitmentProof } from "cosmjs-types/cosmos/ics23/v1/proofs";
 import { Timestamp } from "cosmjs-types/google/protobuf/timestamp";
 import { Height } from "cosmjs-types/ibc/core/client/v1/client";
